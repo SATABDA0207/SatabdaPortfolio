@@ -1,13 +1,9 @@
----
-
-# 002-design-tokens.md
-
-```md
 # TASK 002 — Global Design Tokens
 
 ## Objective
 
 Create centralized design tokens for:
+
 - colors
 - typography
 - spacing
@@ -16,13 +12,13 @@ Create centralized design tokens for:
 
 ---
 
-# Dependencies
+## Dependencies
 
 TASK 001
 
 ---
 
-# Scope
+## Scope
 
 Included:
 
@@ -34,7 +30,7 @@ Included:
 
 ---
 
-# Non-Goals
+## Non-Goals
 
 Do NOT:
 
@@ -44,9 +40,9 @@ Do NOT:
 
 ---
 
-# Design Tokens
+## Design Tokens
 
-## Colors
+### Colors
 
 Background:
 
@@ -66,7 +62,7 @@ Teal:
 
 ---
 
-## Typography
+### Typography
 
 Primary:
 
@@ -78,7 +74,7 @@ Secondary:
 
 ---
 
-## Shadows
+### Shadows
 
 Small:
 2px 2px 0px
@@ -91,7 +87,7 @@ Large:
 
 ---
 
-# Deliverables
+## Deliverables
 
 - updated tailwind config
 - centralized token definitions
@@ -99,9 +95,28 @@ Large:
 
 ---
 
-# Acceptance Criteria
+## Acceptance Criteria
 
 - colors reusable globally
 - fonts load correctly
 - shadows reusable
 - no hardcoded repetitive values
+
+---
+
+## Completion Status
+
+Status: Completed on May 24, 2026
+
+Implemented:
+
+- Tailwind theme extension for brand colors, fonts, spacing, radius, and sketch shadows
+- centralized token map in `src/constants/designTokens.ts`
+- global CSS token variables in `src/styles/globals.css`
+- reusable utility classes: `grid-paper-bg`, `outline-sketch`, `card-sketch`, `pill-sketch`, `handwritten`
+- local font loading via `@fontsource` for Archivo and Caveat (latin subsets)
+
+Verification:
+
+- `npm run lint` passes
+- `npm run build` passes

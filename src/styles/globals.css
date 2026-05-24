@@ -1,10 +1,28 @@
+@import '@fontsource/archivo/latin-400.css';
+@import '@fontsource/archivo/latin-500.css';
+@import '@fontsource/archivo/latin-700.css';
+@import '@fontsource/archivo/latin-900.css';
+@import '@fontsource/caveat/latin-400.css';
+@import '@fontsource/caveat/latin-600.css';
+@import '@fontsource/caveat/latin-700.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
+  --color-bg: #f5f5f5;
+  --color-dark: #303841;
+  --color-orange: #ff5722;
+  --color-teal: #76abae;
+  --shadow-sketch-sm: 2px 2px 0px var(--color-dark);
+  --shadow-sketch-md: 3px 3px 0px var(--color-dark);
+  --shadow-sketch-lg: 4px 4px 0px var(--color-dark);
+  --radius-card: 16px;
+  --radius-btn: 10px;
+  --radius-pill: 9999px;
   font-family:
-    Archivo,
+    'Archivo',
     system-ui,
     -apple-system,
     Segoe UI,
@@ -13,6 +31,34 @@
 
 body {
   margin: 0;
-  background-color: #f5f5f5;
-  color: #303841;
+  background-color: var(--color-bg);
+  color: var(--color-dark);
+}
+
+@layer utilities {
+  .grid-paper-bg {
+    background-image:
+      linear-gradient(rgb(118 171 174 / 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(118 171 174 / 0.15) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .outline-sketch {
+    border: 2px solid var(--color-dark);
+  }
+
+  .card-sketch {
+    border: 2px solid var(--color-dark);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-sketch-md);
+  }
+
+  .pill-sketch {
+    border: 2px solid var(--color-dark);
+    border-radius: var(--radius-pill);
+  }
+
+  .handwritten {
+    font-family: 'Caveat', cursive;
+  }
 }
