@@ -47,6 +47,21 @@ body {
   color: var(--color-dark);
 }
 
+@keyframes sticky-wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-1.2deg);
+  }
+  65% {
+    transform: rotate(0.9deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @layer utilities {
   .grid-paper-bg {
     background-image:
@@ -72,5 +87,36 @@ body {
 
   .handwritten {
     font-family: 'Caveat', cursive;
+  }
+
+  .motion-reveal {
+    will-change: transform, opacity;
+  }
+
+  .motion-hover-lift {
+    transition:
+      transform 200ms ease,
+      box-shadow 200ms ease;
+  }
+
+  .motion-hover-lift:hover {
+    transform: translateY(-3px);
+  }
+
+  .motion-sticky-wobble:hover {
+    animation: sticky-wobble 420ms ease-in-out;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-hover-lift,
+  .motion-sticky-wobble {
+    transition: none;
+    animation: none;
+  }
+
+  .motion-hover-lift:hover,
+  .motion-sticky-wobble:hover {
+    transform: none;
   }
 }

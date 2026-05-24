@@ -8,7 +8,7 @@ type SocialButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 function SocialButton({ icon, label, className = '', ...rest }: SocialButtonProps) {
   return (
     <a
-      className={`inline-flex items-center gap-2 rounded-lg border-2 border-brand-dark bg-white px-3 py-1.5 text-xs font-bold text-brand-dark shadow-sketch-sm transition-transform hover:-translate-y-0.5 ${className}`.trim()}
+      className={`inline-flex items-center gap-2 rounded-lg border-2 border-brand-dark bg-white px-3 py-1.5 text-xs font-bold text-brand-dark shadow-sketch-sm ${className}`.trim()}
       {...rest}
     >
       {icon}

@@ -29,7 +29,7 @@ function CTAButton(props: CTAButtonProps) {
           : 'bg-white text-brand-dark'
 
   const classes =
-    `inline-flex items-center gap-2 rounded-btn border-2 border-brand-dark px-5 py-2.5 text-sm font-bold shadow-sketch-md transition-transform hover:-translate-y-0.5 ${variantClass} ${className}`.trim()
+    `inline-flex items-center gap-2 rounded-btn border-2 border-brand-dark px-5 py-2.5 text-sm font-bold shadow-sketch-md ${variantClass} ${className}`.trim()
 
   if ('href' in props && props.href) {
     const { href, ...anchorRest } = rest as CTAButtonAsAnchor

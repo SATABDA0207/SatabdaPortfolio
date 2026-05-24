@@ -31,7 +31,9 @@ function StickyNote({
         : 'text-brand-dark/70'
 
   return (
-    <aside className={`rounded-lg border-2 p-4 ${variantClass} ${className}`.trim()}>
+    <aside
+      className={`motion-sticky-wobble rounded-lg border-2 p-4 ${variantClass} ${className}`.trim()}
+    >
       {label ? (
         <p className={`handwritten text-sm font-semibold uppercase tracking-wide ${labelClass}`}>
           {label}
