@@ -1,6 +1,7 @@
 import HeroSection from './sections/HeroSection'
 import ExperienceSection from './sections/ExperienceSection'
 import ProjectsSection from './sections/ProjectsSection'
+import SkillsSection from './sections/SkillsSection'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <HeroSection />
         <ExperienceSection />
         <ProjectsSection />
+        <SkillsSection />
       </div>
     </main>
   )
