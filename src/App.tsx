@@ -1,5 +1,6 @@
 import HeroSection from './sections/HeroSection'
 import ExperienceSection from './sections/ExperienceSection'
+import ProjectsSection from './sections/ProjectsSection'
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div className="page-shell">
         <HeroSection />
         <ExperienceSection />
+        <ProjectsSection />
       </div>
     </main>
   )
